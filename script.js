@@ -1,5 +1,6 @@
 document.getElementById('yesButton').addEventListener('click', function() {
-    showPopup("💖 Perfect! You are a JEWEL, a priceless treasure! 💎");
+    document.getElementById('message').innerHTML = "💖 Perfect! You are a JEWEL, a priceless treasure! 💎";
+    document.getElementById('message').style.display = 'block';
 });
 
 document.getElementById('noButton').addEventListener('mouseover', function() {
@@ -11,23 +12,9 @@ document.getElementById('noButton').addEventListener('mouseover', function() {
 });
 
 document.getElementById('noButton').addEventListener('click', function() {
-    showPopup("🔐 Unlock Your Treasure… Love is waiting for you. 💘");
+    document.getElementById('message').innerHTML = "🔐 Unlock Your Treasure… Love is waiting for you. 💘";
+    document.getElementById('message').style.display = 'block';
 });
-
-function showPopup(message) {
-    document.getElementById('popup-message').innerHTML = message;
-    document.getElementById('popup').style.display = 'flex';
-}
-
-// Close the popup when clicking the "X"
-document.querySelector('.close-btn').addEventListener('click', function() {
-    document.getElementById('popup').style.display = 'none';
-});
-
-// Auto-show pop-up after 3 seconds (Optional)
-setTimeout(() => {
-    showPopup("💝 Welcome! A special Valentine’s message awaits you...");
-}, 3000);
 
 window.onload = function() {
     document.getElementById('bg-music').play();
